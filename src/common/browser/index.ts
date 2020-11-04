@@ -8,7 +8,7 @@ const getUrl = (endpoint: string): string => `https://www.instagram.com${endpoin
 const createBrowser: CreateBrowser = async () => {
   let browser = await puppeteer.launch({
     headless: true,
-    args: ['--lang=en-US,en'],
+    args: ['--no-sandbox'],
   });
 
   const getPage: GetPage = async function getPage(endpoint, fn) {
